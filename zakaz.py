@@ -1,0 +1,58 @@
+from PyQt5 import QtCore, QtGui, QtWidgets
+
+
+class Ui_MainWindow(object):
+    def setupUi(self, MainWindow):
+        MainWindow.setObjectName("MainWindow")
+        MainWindow.resize(367, 443)
+        self.centralwidget = QtWidgets.QWidget(MainWindow)
+        self.centralwidget.setObjectName("centralwidget")
+        self.verticalLayoutWidget = QtWidgets.QWidget(self.centralwidget)
+        self.verticalLayoutWidget.setGeometry(QtCore.QRect(10, 10, 160, 88))
+        self.verticalLayoutWidget.setObjectName("verticalLayoutWidget")
+        self.verticalLayout = QtWidgets.QVBoxLayout(self.verticalLayoutWidget)
+        self.verticalLayout.setContentsMargins(0, 0, 0, 0)
+        self.verticalLayout.setObjectName("verticalLayout")
+        self.checkBox_1 = QtWidgets.QCheckBox(self.verticalLayoutWidget)
+        self.checkBox_1.setObjectName("checkBox_1")
+        self.verticalLayout.addWidget(self.checkBox_1)
+        self.checkBox_2 = QtWidgets.QCheckBox(self.verticalLayoutWidget)
+        self.checkBox_2.setObjectName("checkBox_2")
+        self.verticalLayout.addWidget(self.checkBox_2)
+        self.checkBox_3 = QtWidgets.QCheckBox(self.verticalLayoutWidget)
+        self.checkBox_3.setObjectName("checkBox_3")
+        self.verticalLayout.addWidget(self.checkBox_3)
+        self.checkBox_4 = QtWidgets.QCheckBox(self.verticalLayoutWidget)
+        self.checkBox_4.setObjectName("checkBox_4")
+        self.verticalLayout.addWidget(self.checkBox_4)
+        self.pushButton = QtWidgets.QPushButton(self.centralwidget)
+        self.pushButton.setGeometry(QtCore.QRect(10, 110, 75, 23))
+        self.pushButton.setObjectName("pushButton")
+        self.plainTextEdit = QtWidgets.QPlainTextEdit(self.centralwidget)
+        self.plainTextEdit.setGeometry(QtCore.QRect(10, 150, 221, 201))
+        self.plainTextEdit.setObjectName("plainTextEdit")
+        MainWindow.setCentralWidget(self.centralwidget)
+        self.menubar = QtWidgets.QMenuBar(MainWindow)
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 367, 21))
+        self.menubar.setObjectName("menubar")
+        self.menu = QtWidgets.QMenu(self.menubar)
+        self.menu.setObjectName("menu")
+        MainWindow.setMenuBar(self.menubar)
+        self.statusbar = QtWidgets.QStatusBar(MainWindow)
+        self.statusbar.setObjectName("statusbar")
+        MainWindow.setStatusBar(self.statusbar)
+        self.menubar.addAction(self.menu.menuAction())
+
+
+        self.retranslateUi(MainWindow)
+        QtCore.QMetaObject.connectSlotsByName(MainWindow)
+
+    def retranslateUi(self, MainWindow):
+        _translate = QtCore.QCoreApplication.translate
+        MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
+        self.checkBox_1.setText(_translate("MainWindow", "Чизбурегр"))
+        self.checkBox_2.setText(_translate("MainWindow", "Гамбурегр"))
+        self.checkBox_3.setText(_translate("MainWindow", "Кока-кола"))
+        self.checkBox_4.setText(_translate("MainWindow", "Нагетсы"))
+        self.pushButton.setText(_translate("MainWindow", "Заказать"))
+        self.menu.setTitle(_translate("MainWindow", "Заказ в Макдональдсе"))
